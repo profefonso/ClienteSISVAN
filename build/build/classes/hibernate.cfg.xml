@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+        <property name="connection.url">jdbc:derby:.\\resources\\DB\\SISVAN</property>
+        <property name="connection.username"></property>
+        <property name="connection.password"></property>
+ 
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+ 
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.DerbyDialect</property>
+ 
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+ 
+        <!-- Disable the second-level cache -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+ 
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+ 
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+ 
+        <mapping class="co.gov.cundinamarca.sisvan.model.transactions.Menores" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.transactions.Adultos" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.transactions.Gestantes" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Usuarios" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Pacientes" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Paciente_Detalles" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Instituciones" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Crecimiento_Desarrollos" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Lactancias" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Programas" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Micronutrientes" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Actividades" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Cancer_Diagnosticos" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Tipo_Consultas" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Desarrollos" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Especialidades" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Educacion_Menores" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Controles" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Tipo_Identificaciones" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Municipios" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Barrio_Veredas" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Lugar_Residencias" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Tipo_Poblaciones" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Regimenes" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Entidades" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Riesgos" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Grupos_Exportacion" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Institucion_Usuarios" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Versiones" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Departamentos" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Provincias" />
+        <mapping class="co.gov.cundinamarca.sisvan.model.parameters.Dato_Dinamicos" />
+     </session-factory>
+</hibernate-configuration>

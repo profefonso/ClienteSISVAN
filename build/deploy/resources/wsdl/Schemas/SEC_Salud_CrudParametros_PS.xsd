@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/CrudParametros_PS"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:pref="http://www.cundinamarca.gov.co/tiposEntidad/SEC_TIC"
+	xmlns:tns="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/CrudParametros_PS"
+	xmlns:Q1="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS"
+	xmlns:Q2="http://www.cundinamarca.gov.co/tiposXSD">
+
+	<xsd:import schemaLocation="SEC_TIC_TiposXSD.xsd"
+		        namespace="http://www.cundinamarca.gov.co/tiposXSD" />
+		        
+	<xsd:import schemaLocation="SEC_TIC_TiposComunes.xsd"
+		        namespace="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS" />
+
+	<xsd:import schemaLocation="uspCrudParameter.xsd"/>
+	
+	<xsd:element name="TP_CrudParametros_Request"  type="tns:TP_CrudParametros_Request" />
+	<xsd:element name="TP_CrudParametros_Response" type="tns:TP_CrudParametros_Response" />
+
+	<xsd:complexType name="TP_CrudParametros_Request">
+		<xsd:sequence>
+			<xsd:element name="tabla_Tbla" minOccurs="1" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="50"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="operacion_Tbla" minOccurs="1" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="30"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="tamanoPag_Tbla" minOccurs="1" maxOccurs="1">
+
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:totalDigits value="2"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="numPag_Tbla" minOccurs="1" maxOccurs="1">
+
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:totalDigits value="5"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="orden_Tbla" minOccurs="1" maxOccurs="1">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="4000"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="SISVAN" type="SISVAN" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TP_CrudParametros_Response">
+		<xsd:sequence>
+			<xsd:element name="codigo" type="xsd:string" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="mensaje" type="tns:mensaje" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="traza_Excepcion" type="Q2:T_Traza_Excepcion" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="mensaje">
+		<xsd:sequence>
+			<xsd:element name="estatus" type="xsd:string" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="consulta_Res" type="xsd:string" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+</xsd:schema>

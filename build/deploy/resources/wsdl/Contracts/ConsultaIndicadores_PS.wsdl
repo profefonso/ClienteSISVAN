@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	name="ConsultaIndicadores_PS" 
+	targetNamespace="http://servicios.cundinamarca.gov.co/SEC_Salud/SISVAN/ConsultaIndicadores_PS" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:tns="http://servicios.cundinamarca.gov.co/SEC_Salud/SISVAN/ConsultaIndicadores_PS" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+	xmlns:xsd2="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/ConsultaIndicadores_PS"
+	xmlns:xsd3="http://www.cundinamarca.gov.co/tiposXSD">
+  
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="ConsultaIndicadores_PSSOAP" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  
+  <wsdl:types>
+  	<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  		<xsd:import
+  			namespace="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/ConsultaIndicadores_PS"
+  			schemaLocation="../Schemas/SEC_Salud_ConsultaIndicadores_PS.xsd"/>
+  		<xsd:import
+  			namespace="http://www.cundinamarca.gov.co/tiposXSD"
+  			schemaLocation="../Schemas/SEC_TIC_TiposXSD.xsd"/>
+  	</xsd:schema>
+  </wsdl:types>
+  
+  <wsdl:message name="TP_Cabecera">
+		<wsdl:part element="xsd3:TP_Cabecera" name="cabecera"/>
+  </wsdl:message>
+  
+  <wsdl:message name="TP_CargaSisvan_Request">
+        <wsdl:part name="parametro"
+        	element="xsd2:TP_ConsultaIndicadores_Request">
+        </wsdl:part>
+  </wsdl:message>
+   
+   <wsdl:message name="TP_CargaSisvan_Response">
+        <wsdl:part name="parametro"
+        	element="xsd2:TP_ConsultaIndicadores_Response">
+        </wsdl:part>
+   </wsdl:message>
+   
+  <wsdl:portType name="ConsultaIndicadores_PSPORT">
+    <wsdl:operation name="ConsultaIndicadores">
+      <wsdl:input message="tns:TP_CargaSisvan_Request"/>
+      <wsdl:output message="tns:TP_CargaSisvan_Response"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  
+  <wsdl:binding name="ConsultaIndicadores_PSSOAP" type="tns:ConsultaIndicadores_PSPORT">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ConsultaIndicadores">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+      	<soap:header message="tns:TP_Cabecera" part="cabecera" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  
+  <wsdl:service name="ConsultaIndicadores_PS">
+    <wsdl:port binding="tns:ConsultaIndicadores_PSSOAP" name="ConsultaIndicadores_PSSOAP">
+      <soap:address location="http://cundisrv196:7800/SEC_Salud/SISVAN/ConsultaIndicadores_PS"/>
+    </wsdl:port>
+  </wsdl:service>
+  
+</wsdl:definitions>

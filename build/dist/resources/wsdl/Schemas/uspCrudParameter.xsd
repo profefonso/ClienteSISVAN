@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" 
+elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="date">
+	    <xs:restriction base="xs:string">
+	      <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="datetime">
+	    <xs:restriction base="xs:string">
+	      <xs:pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}"/>
+	    </xs:restriction>
+ 	 </xs:simpleType>
+	<xs:simpleType name="integer1">
+	    <xs:restriction base="xs:integer">
+	      <xs:totalDigits value="1"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="integer10">
+	    <xs:restriction base="xs:integer">
+	      <xs:totalDigits value="10"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="integer12">
+	    <xs:restriction base="xs:integer">
+	      <xs:totalDigits value="12"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="integer3">
+	    <xs:restriction base="xs:integer">
+	      <xs:totalDigits value="3"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="integer5">
+	    <xs:restriction base="xs:integer">
+	      <xs:totalDigits value="5"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="integer6">
+	    <xs:restriction base="xs:integer">
+	      <xs:totalDigits value="6"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="integer7">
+	    <xs:restriction base="xs:integer">
+	      <xs:totalDigits value="7"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string0-1">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="1"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string0-10">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="10"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string0-100">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="100"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string0-200">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="200"/>
+	    </xs:restriction>
+ 	 </xs:simpleType>
+	<xs:simpleType name="string0-250">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="250"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string0-3">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="3"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string0-30">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="30"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string0-4">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="4"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string0-50">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="0"/>
+	      <xs:maxLength value="50"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-1">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="1"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-10">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="10"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-100">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="100"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-12">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="12"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-2">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="2"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-20">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="20"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-3">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="3"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-30">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="30"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-5">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="5"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	<xs:simpleType name="string1-50">
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="1"/>
+	      <xs:maxLength value="50"/>
+	    </xs:restriction>
+  	</xs:simpleType>
+	
+
+	<xs:element name="SISVAN" type="SISVAN"/>
+
+	<xs:complexType name="SISVAN">
+		<xs:sequence>
+			<xs:element name="ENTITY" type="ENTITYTipo" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ENTITYTipo">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="ACT_ESTADO" type="string1-1" />
+				<xs:attribute name="ACT_FECHA" type="datetime" />
+				<xs:attribute name="ACT_ID" type="string1-10" />
+				<xs:attribute name="ACT_NOMBRE" type="string1-50" />
+				<xs:attribute name="BVE_ESTADO" type="string1-1" />
+				<xs:attribute name="BVE_FECHA" type="datetime" />
+				<xs:attribute name="BVE_ID" type="string1-5" />
+				<xs:attribute name="BVE_NOMBRE" type="string1-50" />
+				<xs:attribute name="BVE_TIPO" type="string1-1" />
+				<xs:attribute name="CDE_ESTADO" type="string1-1" />
+				<xs:attribute name="CDE_FECHA" type="datetime" />
+				<xs:attribute name="CDE_ID" type="string1-10" />
+				<xs:attribute name="CDE_NOMBRE" type="string1-50" />
+				<xs:attribute name="CDI_ESTADO" type="string1-1" />
+				<xs:attribute name="CDI_FECHA" type="datetime" />
+				<xs:attribute name="CDI_ID" type="string1-10" />
+				<xs:attribute name="CDI_NOMBRE" type="string1-50" />
+				<xs:attribute name="CTR_ESTADO" type="string1-1" />
+				<xs:attribute name="CTR_FECHA" type="datetime" />
+				<xs:attribute name="CTR_ID" type="string1-10" />
+				<xs:attribute name="CTR_NOMBRE" type="string1-50" />
+				<xs:attribute name="DEP_BVE_ID" type="string1-2" />
+				<xs:attribute name="DEP_ID" type="string1-2" />
+				<xs:attribute name="DEP_IPS_ID" type="string1-2" />
+				<xs:attribute name="DEP_MUN_ID" type="string1-2" />
+				<xs:attribute name="DEP_NOMBRE" type="string1-50" />
+				<xs:attribute name="DEP_PRO_ID" type="string1-2" />
+				<xs:attribute name="DEP_USU_ID" type="string1-2" />
+				<xs:attribute name="DES_ESTADO" type="string1-1" />
+				<xs:attribute name="DES_FECHA" type="datetime" />
+				<xs:attribute name="DES_ID" type="string1-10" />
+				<xs:attribute name="DES_NOMBRE" type="string1-50" />
+				<xs:attribute name="DIA_CAUSA_MUERTE" type="string1-1" />
+				<xs:attribute name="DIA_CONTROL" type="string1-1" />
+				<xs:attribute name="DIA_DIAS_HOSPITALIZACION"
+					type="integer3" />
+				<xs:attribute name="DIA_EDAD_DESDE" type="integer3" />
+				<xs:attribute name="DIA_EDAD_HASTA" type="integer3" />
+				<xs:attribute name="DIA_ESTADO" type="string1-1" />
+				<xs:attribute name="DIA_FECHA" type="datetime" />
+				<xs:attribute name="DIA_ID" type="string1-10" />
+				<xs:attribute name="DIA_MEDIDA_EDAD_DESDE"
+					type="string0-1" />
+				<xs:attribute name="DIA_MEDIDA_EDAD_HASTA"
+					type="string0-1" />
+				<xs:attribute name="DIA_NOMBRE" type="string0-250" />
+				<xs:attribute name="DIA_PRINCIPAL" type="string1-1" />
+				<xs:attribute name="DIA_RECIEN_NACIDO" type="string1-1" />
+				<xs:attribute name="DIA_SEXO" type="string0-1" />
+				<xs:attribute name="DIR_ESTADO" type="string1-1" />
+				<xs:attribute name="DIR_FECHA" type="datetime" />
+				<xs:attribute name="DIR_ID" type="string1-10" />
+				<xs:attribute name="DIR_NOMBRE" type="string1-50" />
+				<xs:attribute name="EGE_ESTADO" type="string1-1" />
+				<xs:attribute name="EGE_FECHA" type="datetime" />
+				<xs:attribute name="EGE_ID" type="string1-10" />
+				<xs:attribute name="EGE_NOMBRE" type="string1-50" />
+				<xs:attribute name="EME_ESTADO" type="string1-1" />
+				<xs:attribute name="EME_FECHA" type="datetime" />
+				<xs:attribute name="EME_ID" type="string1-10" />
+				<xs:attribute name="EME_NOMBRE" type="string1-50" />
+				<xs:attribute name="EPS_DIRECCION" type="string0-100" />
+				<xs:attribute name="EPS_EMAIL" type="string0-100" />
+				<xs:attribute name="EPS_ESTADO" type="string1-1" />
+				<xs:attribute name="EPS_FECHA" type="datetime" />
+				<xs:attribute name="EPS_ID" type="string1-10" />
+				<xs:attribute name="EPS_NIT" type="string1-20" />
+				<xs:attribute name="EPS_NOMBRE" type="string0-100" />
+				<xs:attribute name="EPS_NOMBRE_REPRESENTANTE"
+					type="string0-100" />
+				<xs:attribute name="EPS_TELEFONO" type="string0-50" />
+				<xs:attribute name="EPS_TIPO" type="string0-4" />
+				<xs:attribute name="EPS_USU_ID" type="string0-10"/>
+				<xs:attribute name="ESP_APLICA_ADULTO" type="string1-1" />
+				<xs:attribute name="ESP_APLICA_GESTANTE"
+					type="string1-1" />
+				<xs:attribute name="ESP_APLICA_MENOR" type="string1-1" />
+				<xs:attribute name="ESP_ESTADO" type="string1-1" />
+				<xs:attribute name="ESP_FECHA" type="datetime" />
+				<xs:attribute name="ESP_ID" type="string1-10" />
+				<xs:attribute name="ESP_NOMBRE" type="string1-50" />
+				<xs:attribute name="IPS_CARACTERISTICA"
+					type="string1-1" />
+				<xs:attribute name="IPS_CORREO_ELECTRONICO"
+					type="string0-100" />
+				<xs:attribute name="IPS_DIGITOVERIFICACION"
+					type="integer1" />
+				<xs:attribute name="IPS_DIRECCION" type="string0-100" />
+				<xs:attribute name="IPS_ESTADO" type="string1-1" />
+				<xs:attribute name="IPS_FECHA" type="datetime" />
+				<xs:attribute name="IPS_FECHA_CONSTITUCION" type="date" />
+				<xs:attribute name="IPS_ID" type="string1-12" />
+				<xs:attribute name="IPS_IDENTIFICACION"
+					type="string1-20" />
+				<xs:attribute name="IPS_IPSU_ID" type="string1-12" />
+				<xs:attribute name="IPS_NIVEL" type="string1-1" />
+				<xs:attribute name="IPS_NOMBRE" type="string1-100" />
+				<xs:attribute name="IPS_REPRESENTANTE_LEGAL"
+					type="string0-100" />
+				<xs:attribute name="IPS_RESPONSABLE_NOTIFICACION"
+					type="string0-100" />
+				<xs:attribute name="IPS_TELEFONO" type="string0-50" />
+				<xs:attribute name="IPSU_ESTADO" type="string1-1" />
+				<xs:attribute name="LAC_ESTADO" type="string1-1" />
+				<xs:attribute name="LAC_FECHA" type="datetime" />
+				<xs:attribute name="LAC_ID" type="string1-10" />
+				<xs:attribute name="LAC_NOMBRE" type="string1-50" />
+				<xs:attribute name="LRE_ESTADO" type="string1-1" />
+				<xs:attribute name="LRE_FECHA" type="datetime" />
+				<xs:attribute name="LRE_ID" type="string1-10" />
+				<xs:attribute name="LRE_NOMBRE" type="string1-50" />
+				<xs:attribute name="MEN_ACCION" type="string0-200" />
+				<xs:attribute name="MEN_ESTADO" type="string1-1" />
+				<xs:attribute name="MEN_ID" type="string1-10" />
+				<xs:attribute name="MEN_NOMBRE" type="string1-50" />
+				<xs:attribute name="MEN_ORDEN" type="integer10" />
+				<xs:attribute name="MEN_PERM_ID" type="string1-10" />
+				<xs:attribute name="MEN_PREDECESOR" type="string0-10" />
+				<xs:attribute name="MEN_TIPO" type="string1-1" />
+				<xs:attribute name="MNU_APLICA_ADULTO" type="string1-1" />
+				<xs:attribute name="MNU_APLICA_GESTANTE"
+					type="string1-1" />
+				<xs:attribute name="MNU_APLICA_MENOR" type="string1-1" />
+				<xs:attribute name="MNU_ESTADO" type="string1-1" />
+				<xs:attribute name="MNU_FECHA" type="datetime" />
+				<xs:attribute name="MNU_ID" type="string1-10" />
+				<xs:attribute name="MNU_NOMBRE" type="string1-50" />
+				<xs:attribute name="MUN_BVE_ID" type="string1-3" />
+				<xs:attribute name="MUN_ID" type="string1-3" />
+				<xs:attribute name="MUN_IPS_ID" type="string1-3" />
+				<xs:attribute name="MUN_NOMBRE" type="string1-50" />
+				<xs:attribute name="MUN_USU_ID" type="string0-3" />
+				<xs:attribute name="PER_ESTADO" type="string1-1" />
+				<xs:attribute name="PER_ID" type="string1-10" />
+				<xs:attribute name="PER_NOMBRE" type="string1-100" />
+				<xs:attribute name="PER_PERM_ID" type="string1-10" />
+				<xs:attribute name="PER_USU_ID" type="string1-10" />
+				<xs:attribute name="PERM_ANULAR" type="string1-1" />
+				<xs:attribute name="PERM_BORRAR" type="string1-1" />
+				<xs:attribute name="PERM_CONFIRMAR" type="string1-1" />
+				<xs:attribute name="PERM_DESCONFIRMAR" type="string1-1" />
+				<xs:attribute name="PERM_INSERTAR" type="string1-1" />
+				<xs:attribute name="PERM_MODIFICAR" type="string1-1" />
+				<xs:attribute name="PERM_PERMISO" type="string1-1" />
+				<xs:attribute name="PRG_APLICA_ADULTO" type="string1-1" />
+				<xs:attribute name="PRG_APLICA_GESTANTE"
+					type="string1-1" />
+				<xs:attribute name="PRG_APLICA_MENOR" type="string1-1" />
+				<xs:attribute name="PRG_ESTADO" type="string1-1" />
+				<xs:attribute name="PRG_FECHA" type="datetime" />
+				<xs:attribute name="PRG_ID" type="string1-10" />
+				<xs:attribute name="PRG_NOMBRE" type="string1-50" />
+				<xs:attribute name="PRO_ESTADO" type="string1-1" />
+				<xs:attribute name="PRO_ID" type="string1-5" />
+				<xs:attribute name="PRO_MUN_ID" type="string1-5" />
+				<xs:attribute name="PRO_NOMBRE" type="string1-50" />
+				<xs:attribute name="REG_ESTADO" type="string1-1" />
+				<xs:attribute name="REG_FECHA" type="datetime" />
+				<xs:attribute name="REG_ID" type="string1-10" />
+				<xs:attribute name="REG_NOMBRE" type="string1-50" />
+				<xs:attribute name="RIE_ESTADO" type="string1-1" />
+				<xs:attribute name="RIE_FECHA" type="datetime" />
+				<xs:attribute name="RIE_ID" type="string1-10" />
+				<xs:attribute name="RIE_NOMBRE" type="string1-100" />
+				<xs:attribute name="TAD_ESTADO" type="string1-1" />
+				<xs:attribute name="TAD_FECHA" type="datetime" />
+				<xs:attribute name="TAD_ID" type="string1-10" />
+				<xs:attribute name="TAD_NOMBRE" type="string1-50" />
+				<xs:attribute name="TCO_ESTADO" type="string1-1" />
+				<xs:attribute name="TCO_FECHA" type="datetime" />
+				<xs:attribute name="TCO_ID" type="string1-10" />
+				<xs:attribute name="TCO_NOMBRE" type="string1-50" />
+				<xs:attribute name="TCO_APLICA_ADULTOS" type="string1-1"/>
+				<xs:attribute name="TCO_APLICA_GESTANTES" type="string1-1"/>
+				<xs:attribute name="TCO_APLICA_MENORES" type="string1-1"/>
+				<xs:attribute name="TID_APLICA_IPS" type="string1-1" />
+				<xs:attribute name="TID_APLICA_PACIENTE" type="string1-1" />
+				<xs:attribute name="TID_APLICA_USUARIO" type="string1-1" />
+				<xs:attribute name="TID_APLICA_ADULTOS" type="string1-1"/>
+				<xs:attribute name="TID_APLICA_GESTANTES" type="string1-1"/>
+				<xs:attribute name="TID_APLICA_MENORES" type="string1-1"/>
+				<xs:attribute name="TID_ESTADO" type="string1-1"/>
+				<xs:attribute name="TID_ID" type="string1-10" />
+				<xs:attribute name="TID_IPS_ID" type="string1-10" />
+				<xs:attribute name="TID_NOMBRE" type="string1-50" />
+				<xs:attribute name="TID_USU_ID" type="string1-10" />
+				<xs:attribute name="TPO_ESTADO" type="string1-1" />
+				<xs:attribute name="TPO_FECHA" type="datetime" />
+				<xs:attribute name="TPO_ID" type="string1-10" />
+				<xs:attribute name="TPO_NOMBRE" type="string1-50" />
+				<xs:attribute name="USU_ACT_ID" type="string1-10" />
+				<xs:attribute name="USU_BVE_ID" type="string1-10" />
+				<xs:attribute name="USU_CARGO" type="string1-100" />
+				<xs:attribute name="USU_CDE_ID" type="string1-10" />
+				<xs:attribute name="USU_CDI_ID" type="string1-10" />
+				<xs:attribute name="USU_CLAVE" type="string1-30" />
+				<xs:attribute name="USU_CTR_ID" type="string1-10" />
+				<xs:attribute name="USU_DES_ID" type="string1-10" />
+				<xs:attribute name="USU_DIA_ID" type="string1-10" />
+				<xs:attribute name="USU_DIR_ID" type="string1-10" />
+				<xs:attribute name="USU_DIRECCION" type="string1-100" />
+				<xs:attribute name="USU_EGE_ID" type="string1-10" />
+				<xs:attribute name="USU_EMAIL" type="string0-100" />
+				<xs:attribute name="USU_EME_ID" type="string1-10" />
+				<xs:attribute name="USU_EPS_ID" type="string1-10" />
+				<xs:attribute name="USU_ESP_ID" type="string1-10" />
+				<xs:attribute name="USU_ESTADO" type="string1-1" />
+				<xs:attribute name="USU_ID" type="string1-10" />
+				<xs:attribute name="USU_IDENTIFICACION"
+					type="string1-20" />
+				<xs:attribute name="USU_IPS_ID" type="string1-10" />
+				<xs:attribute name="USU_IPSU_ID" type="string1-10" />
+				<xs:attribute name="USU_LAC_ID" type="string1-10" />
+				<xs:attribute name="USU_LRE_ID" type="string1-10" />
+				<xs:attribute name="USU_MNU_ID" type="string1-10" />
+				<xs:attribute name="USU_NIVEL" type="string1-1" />
+				<xs:attribute name="USU_PRG_ID" type="string1-10" />
+				<xs:attribute name="USU_PRIMER_APELLIDO"
+					type="string1-30" />
+				<xs:attribute name="USU_PRIMER_NOMBRE"
+					type="string1-30" />
+				<xs:attribute name="USU_REG_ID" type="string1-10" />
+				<xs:attribute name="USU_RIE_ID" type="string1-10" />
+				<xs:attribute name="USU_SEGUNDO_APELLIDO"
+					type="string0-30" />
+				<xs:attribute name="USU_SEGUNDO_NOMBRE"
+					type="string0-30" />
+				<xs:attribute name="USU_TAD_ID" type="string1-10" />
+				<xs:attribute name="USU_TCO_ID" type="string1-10" />
+				<xs:attribute name="USU_TELEFONO_CELULAR"
+					type="integer12" />
+				<xs:attribute name="USU_TELEFONO_EXTENCION"
+					type="integer6" />
+				<xs:attribute name="USU_TELEFONO_INDICATIVO"
+					type="integer5" />
+				<xs:attribute name="USU_TELEFONO_NUMERO"
+					type="integer7" />
+				<xs:attribute name="USU_TPO_ID" type="string1-10" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

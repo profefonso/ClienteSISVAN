@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="600.0" maxWidth="850.0" minHeight="600.0" minWidth="850.0" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.gov.cundinamarca.sisvan.view.PacientesOverviewController">
+   <children>
+      <GridPane layoutX="83.0" layoutY="96.0" prefHeight="600.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="65.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="561.0" minHeight="10.0" prefHeight="525.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="78.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TabPane prefHeight="509.0" prefWidth="850.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+              <tabs>
+                <Tab text="Editar o Crear Paciente">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="73.0" layoutY="125.0" prefHeight="506.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="10.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="11.0" minHeight="11.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="11.0" minHeight="11.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="11.0" minHeight="11.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="11.0" minHeight="11.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="137.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="199.0" minHeight="2.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Identificación del paciente" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="20.0" />
+                                       </GridPane.margin></Label>
+                                    <ImageView fitHeight="15.0" fitWidth="16.0" onMouseClicked="#handleFindPacienteList" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="file:resources/images/buscar.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Tipo de identificación" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <Label text="Primer nombre" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label text="Segundo nombre" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                    <Label text="Primer apellido" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                                    <Label text="Segundo apellido" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                    <Label text="Sexo" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+                                    <Label text="Fecha de nacimiento" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+                                    <Label text="      Dirección de residencia" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                    <Label text="Localidad / Barrio / Vereda" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label text="Municipio de residencia" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                    <Label text="Zona de residencia" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <Label text="Teléfono" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="2.0" stroke="BLACK" strokeType="INSIDE" width="802.0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                                    <Button defaultButton="true" mnemonicParsing="false" onAction="#handleGuardarContinuar" prefHeight="38.0" prefWidth="183.0" text="Guardar y Continuar" GridPane.columnIndex="7" GridPane.rowIndex="17" />
+                                    <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="37.0" prefWidth="185.0" text="Cancelar" GridPane.columnIndex="5" GridPane.rowIndex="17" />
+                                    <Label text="Departamento de residencia" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <ComboBox fx:id="tipo_IdentificacionesBox" prefHeight="25.0" prefWidth="186.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <TextField fx:id="pacienteIdentificacionField" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                    <TextField fx:id="pacientePrimerNombreField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="pacienteSegundoNombreField" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                    <TextField fx:id="pacientePrimerApellidoField" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                    <TextField fx:id="pacienteSegundoApellidoField" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                                    <ComboBox fx:id="departamentosBox" prefHeight="25.0" prefWidth="186.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="municipiosBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                                    <TextField fx:id="detalle_pacienteDireccionField" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="barrio_VeredasBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="lugar_ResidenciasBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <TextField fx:id="detalle_pacienteTelefonoField" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                                    <DatePicker fx:id="pacienteFechaNacimientoField" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                                    <ComboBox fx:id="sexoBox" prefHeight="25.0" prefWidth="186.0" GridPane.columnIndex="7" GridPane.rowIndex="11" />
+                                    <TextField fx:id="detalle_pacienteCelularField" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                    <TextField fx:id="detalle_pacienteCorreoField" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+                                    <DatePicker fx:id="pacienteFechaConsultafield" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Fecha de consulta" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ImageView fitHeight="72.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="15" GridPane.valignment="BOTTOM">
+                                       <image>
+                                          <Image url="file:resources/images/LOGOS-01-PEQ.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="119.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="15">
+                                       <image>
+                                          <Image url="file:resources/images/CLIENTES-11-PEQ.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="15.0" fitWidth="16.0" onMouseClicked="#handleIrADireccion" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="file:resources/images/buscar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tabMenores" text="Historico Menores">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="85.0" layoutY="136.0" prefHeight="506.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="5.0" prefWidth="5.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="838.0" minWidth="10.0" prefWidth="837.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="838.0" minWidth="8.0" prefWidth="8.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="164.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="407.0" minHeight="407.0" prefHeight="407.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TableView fx:id="tableMenores" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy></TableView>
+                                    <GridPane GridPane.columnIndex="1">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="211.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.0" minWidth="10.0" prefWidth="206.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="32.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="164.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="58.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="246.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="18.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="12.0" minHeight="4.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Consultar registro por documento:" GridPane.rowIndex="1" />
+                                          <TextField fx:id="buscarMenorField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Button mnemonicParsing="false" onAction="#handleBuscaMenor" prefHeight="25.0" prefWidth="148.0" text="Consultar" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <Button fx:id="btnGraficasHistoricasMenores" disable="true" mnemonicParsing="false" onAction="#handleIrGraficasHistoricas" text="Graficas de Seguimiento" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="652.0" minWidth="10.0" prefWidth="651.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="411.0" minWidth="10.0" prefWidth="186.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button cancelButton="true" defaultButton="true" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="37.0" prefWidth="185.0" text="Cancelar" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabAdultos" text="Historico Adultos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="51.0" layoutY="73.0" prefHeight="506.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="842.0" minWidth="3.0" prefWidth="4.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="842.0" minWidth="5.0" prefWidth="841.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="845.0" minWidth="5.0" prefWidth="8.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="164.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="407.0" minHeight="407.0" prefHeight="407.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="661.0" minWidth="10.0" prefWidth="658.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="192.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button cancelButton="true" defaultButton="true" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="37.0" prefWidth="185.0" text="Cancelar" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="193.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="324.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="323.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="18.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Consultar registro por documento:" GridPane.rowIndex="1" />
+                                          <TextField fx:id="buscarAdultoField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Button mnemonicParsing="false" onAction="#handleBuscaAdulto" prefHeight="25.0" prefWidth="133.0" text="Consultar" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <TableView fx:id="tableAdultos" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabGestantes" text="Historico Gestantes">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="146.0" layoutY="115.0" prefHeight="506.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="3.0" prefWidth="7.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="847.0" minWidth="10.0" prefWidth="838.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="847.0" minWidth="9.0" prefWidth="9.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="164.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="407.0" minHeight="407.0" prefHeight="407.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="650.0" minWidth="10.0" prefWidth="650.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="412.0" minWidth="10.0" prefWidth="186.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="21.0" minHeight="7.0" prefHeight="7.0" />
+                                          <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="45.0" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button cancelButton="true" defaultButton="true" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="37.0" prefWidth="185.0" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="230.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="499.0" minWidth="10.0" prefWidth="203.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="499.0" minWidth="0.0" prefWidth="20.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="167.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="11.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="423.0" minWidth="10.0" prefWidth="213.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="18.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Consultar registro por documento:" GridPane.rowIndex="1" />
+                                          <TextField fx:id="buscarGestanteField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Button mnemonicParsing="false" onAction="#handleBuscaGestante" prefHeight="25.0" prefWidth="155.0" text="Consultar" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <Button fx:id="btnGraficasHistoricasGestantes" disable="true" mnemonicParsing="false" onAction="#handleIrGraficasHistoricasGestantes" text="Grafica de Seguimiento" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <TableView fx:id="tableGestantes" prefHeight="403.0" prefWidth="836.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy></TableView>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <ImageView fitHeight="66.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resources/images/SELECCIONE%20PACIENTE-01-PEQ.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

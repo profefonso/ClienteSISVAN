@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/CargaSisvan_PS" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:pref="http://www.cundinamarca.gov.co/tiposEntidad/SEC_TIC" 
+	xmlns:tns="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/CargaSisvan_PS" 
+	xmlns:Q1="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS" 
+	xmlns:Q2="http://www.cundinamarca.gov.co/tiposXSD">
+	
+    <xsd:import schemaLocation="SEC_TIC_TiposXSD.xsd" namespace="http://www.cundinamarca.gov.co/tiposXSD"/>
+    <xsd:import schemaLocation="SEC_TIC_TiposComunes.xsd" namespace="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS"/>
+    
+    <xsd:element name="TP_CargaSisvan_Request" type="tns:TP_CargaSisvan_Request"/>
+    <xsd:element name="TP_CargaSisvan_Response" type="tns:TP_CargaSisvan_Response"/>
+    
+    <xsd:complexType name="TP_CargaSisvan_Request">
+    	<xsd:sequence>
+    		<xsd:element name="cod_Upgd" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="cod_Usr" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="cod_Grp" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="base64_Carga" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="TP_CargaSisvan_Response">
+    	<xsd:sequence>
+    		<xsd:element name="codigo" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="mensaje" type="tns:mensaje" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="traza_Excepcion" type="Q2:T_Traza_Excepcion" minOccurs="0" maxOccurs="1"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="mensaje">
+    	<xsd:sequence>
+    		<xsd:element name="estatus" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/CrucesSisvan_PS" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pref="http://www.cundinamarca.gov.co/tiposEntidad/SEC_TIC" xmlns:tns="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/CrucesSisvan_PS" xmlns:Q1="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS" xmlns:Q2="http://www.cundinamarca.gov.co/tiposXSD">
+	
+    <xsd:import schemaLocation="SEC_TIC_TiposXSD.xsd" namespace="http://www.cundinamarca.gov.co/tiposXSD"/>
+    <xsd:import schemaLocation="SEC_TIC_TiposComunes.xsd" namespace="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS"/>
+    
+    <xsd:element name="TP_CrucesSisvan_Request" type="tns:TP_CrucesSisvan_Request"/>
+    <xsd:element name="TP_CrucesSisvan_Response" type="tns:TP_CrucesSisvan_Response"/>
+    
+    <xsd:complexType name="TP_CrucesSisvan_Request">
+    	<xsd:sequence>
+    		<xsd:element name="cod_Mcpio" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="3" />
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="cod_Pvncia" minOccurs="1"
+    			maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="3" />
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="userId_Crcs" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="10"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="fecha_Inicio" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="fecha_Fin" type="xsd:dateTime" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="tabla_Tbla" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="50"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="TP_CrucesSisvan_Response">
+    	<xsd:sequence>
+    		<xsd:element name="codigo" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="mensaje" type="tns:mensaje" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="traza_Excepcion" type="Q2:T_Traza_Excepcion" minOccurs="0" maxOccurs="1"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="mensaje">
+    	<xsd:sequence>
+    		<xsd:element name="estatus" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="cruces" type="tns:crucesTipo" minOccurs="0" maxOccurs="1"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="itemTipo">
+    	<xsd:sequence>
+    		<xsd:element name="municipioNotifica_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="upgdnotifica_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="upgdCaracteristica_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="fechaReporte_Crcs" type="xsd:dateTime" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="tipoId_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="numId_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="primerNom_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="segundoNom_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="primerApe_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="segundoApe_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="dptoResidencia_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="municipioRes_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="dirResidencia_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="localidadBarrio_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="zonaRuralUrbana_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="tel_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="fechaNacimiento_Crcs" type="xsd:dateTime" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="sexo_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="controlRN_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="tipoConsulta_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="peso_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="talla_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="perimetroCefalico_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="circunferenciaBrazo_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="lactanciaMaterna_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="tiempoLactancia_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="tipoPoblacion_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="programaNutricional_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="programaSan_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="micronutrientes_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="regimenAfiliacion_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="EPS_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="desarrolloMotor_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="ERA_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="EDA_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="desparacitacion_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="actividadFisica_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="remisionInterconsulta_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="educacion_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="pesoPregestacional_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="semanasGestacion_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="riesgoBPN_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="mujerLactante_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="circunferenciaCintura_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="circunferenciaMuneca_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="imc_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="estadoNutricional_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="clasificacionObesidad_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="obesidadAbdominal_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="edadAprox_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="momentoVital_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="zsimcEdad_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="imcEdad_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="zspesoEdad_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="pesoEdad_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="zspesoTalla_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="pesoTalla_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="zsTallaEdad_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="tallaEdad_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="zspcefalicoEdad_Crcs" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="pcefalicoEdad_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="circunMediaBrazo_Crcs" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="crucesTipo">
+    	<xsd:sequence>
+    		<xsd:element name="item" type="tns:itemTipo" minOccurs="0" maxOccurs="unbounded"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

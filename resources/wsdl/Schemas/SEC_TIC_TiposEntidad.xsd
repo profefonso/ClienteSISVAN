@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cundinamarca.gov.co/tiposEntidad/SEC_TIC">
+	<xsd:annotation>
+		<xsd:documentation>
+		<![CDATA[
+			Tipos de Entidades definidas para reutilización de en servicios o proyectos de integracion
+			para las aplicaciones de la secretaria de TIC
+			]]>
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:complexType name="TE_Entidad">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="id_Ent" type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="tipId_Ent">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+
+
+
+						<xsd:enumeration value="3"></xsd:enumeration>
+						<xsd:enumeration value="5"></xsd:enumeration>
+						<xsd:enumeration value="6"></xsd:enumeration>
+						<xsd:enumeration value="1"></xsd:enumeration>
+						<xsd:enumeration value="2"></xsd:enumeration>
+						<xsd:enumeration value="4"></xsd:enumeration>
+						<xsd:enumeration value="8"></xsd:enumeration>
+						<xsd:enumeration value="7"></xsd:enumeration>
+						<xsd:enumeration value="11"></xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="nom_Ent" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ape_Ent" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="dir_Ent" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="tel_Ent" type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="email_Ent" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="cod_Num_Pais" type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="cod_Num_Ciudad" type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="desc_Ent">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="300"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="TE_Paises">
+		<xsd:sequence>
+			<xsd:element name="codNumPais" type="xsd:int"/>
+			<xsd:element name="nomPais" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="TE_Radicacion">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="id_Ent"
+				type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="tipId_Ent">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="5" />
+						<xsd:enumeration value="3" />
+						<xsd:enumeration value="6" />
+						<xsd:enumeration value="1"></xsd:enumeration>
+						<xsd:enumeration value="2"></xsd:enumeration>
+						<xsd:enumeration value="4"></xsd:enumeration>
+						<xsd:enumeration value="20"></xsd:enumeration>
+						<xsd:enumeration value="7"></xsd:enumeration>
+						<xsd:enumeration value="11"></xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="origen_Rad"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1"
+				name="fechaOrigen_Rad" type="xsd:date">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="asunto_Rad"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="desc_Rad"
+				type="xsd:string">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

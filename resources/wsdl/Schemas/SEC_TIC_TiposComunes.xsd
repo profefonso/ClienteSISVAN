@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:pref="http://www.cundinamarca.gov.co/tiposXSD" xmlns:pref1="http://www.cundinamarca.gov.co/tiposEntidad/SEC_TIC" xmlns:tns="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS" xmlns:Q1="http://schemas.xmlsoap.org/soap/envelope/">
+    <xsd:import schemaLocation="../DetalleMetasPOAI_PS/IBMdefined/org/xmlsoap/schemas/soap/envelope/soapenv11.xsd" namespace="http://schemas.xmlsoap.org/soap/envelope/"></xsd:import>
+    <xsd:import namespace="http://www.cundinamarca.gov.co/tiposEntidad/SEC_TIC" schemaLocation="SEC_TIC_TiposEntidad.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.cundinamarca.gov.co/tiposXSD" schemaLocation="SEC_TIC_TiposXSD.xsd"/>
+	<xsd:complexType name="TC_Entrada_Servicio">
+		<xsd:sequence>
+			<xsd:element name="Cabecera" type="pref:T_Cabecera"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TC_Salida_Servicio">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="codigo" type="xsd:string"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="mensaje" type="tns:mensaje"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="traza_Excepcion" type="pref:T_Traza_Excepcion"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="mensaje">
+		<xsd:sequence>
+			<xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any" processContents="lax"/>
+		</xsd:sequence>
+		<xsd:anyAttribute namespace="##any" processContents="lax"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="TC_Cabecera">
+		<xsd:complexContent>
+            <xsd:extension base="pref:T_Cabecera"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+    <xsd:complexType name="TC_SAP_Error">
+    	<xsd:sequence>
+    		<xsd:element name="Type" type="xsd:string" minOccurs="0"
+    			maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="Id" type="xsd:string" minOccurs="0"
+    			maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="Number" type="xsd:string" minOccurs="0"
+    			maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="Message" type="xsd:string" minOccurs="0"
+    			maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="LogNo" type="xsd:string" minOccurs="0"
+    			maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="LogMsgNo" type="xsd:string" minOccurs="0"
+    			maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="MessageV1" type="xsd:string"
+    			minOccurs="0" maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="MessageV2" type="xsd:string"
+    			minOccurs="0" maxOccurs="1">
+    		</xsd:element>
+    		<xsd:element name="MessageV3" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+    		<xsd:element name="MessageV4" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+    		<xsd:element name="Parameter" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+    		<xsd:element name="Row" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+    		<xsd:element name="Field" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+    		<xsd:element name="System" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+    		<xsd:element name="Fault" type="tns:mensaje" minOccurs="0" maxOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

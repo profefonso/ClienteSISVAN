@@ -1,0 +1,28 @@
+.background {
+    -fx-background-color: #ffffff;
+}
+
+.campo {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-border-radius: 10px 10px 10px 10px;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-border-color: #0a3759;
+	-fx-padding: 2px;
+	-fx-max-height: 30;
+	-fx-min-height: 30;
+}
+
+.boton{
+	-fx-border-radius: 10px 10px 10px 10px;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-font-size: 14pt;
+    -fx-padding: 2px;
+    -fx-background-color: #3fa0da;
+    -fx-text-fill: white;
+}
+
+.etiqueta{
+	-fx-font-size: 14pt;
+	-fx-text-fill: #0a3759;
+}

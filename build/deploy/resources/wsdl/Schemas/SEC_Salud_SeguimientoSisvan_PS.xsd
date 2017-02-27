@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	targetNamespace="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/SeguimientoSisvan_PS" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:pref="http://www.cundinamarca.gov.co/tiposEntidad/SEC_TIC" 
+	xmlns:tns="http://www.cundinamarca.gov.co/tiposProyecto/SEC_Salud/SISVAN/SeguimientoSisvan_PS" 
+	xmlns:Q1="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS" 
+	xmlns:Q2="http://www.cundinamarca.gov.co/tiposXSD">
+	
+    <xsd:import schemaLocation="SEC_TIC_TiposXSD.xsd" namespace="http://www.cundinamarca.gov.co/tiposXSD"/>
+    <xsd:import schemaLocation="SEC_TIC_TiposComunes.xsd" namespace="http://www.cundinamarca.gov.co/tiposComunes/SEC_TICS"/>
+    
+    <xsd:element name="TP_SeguimientoSisvan_Request" type="tns:TP_SeguimientoSisvan_Request"/>
+    <xsd:element name="TP_SeguimientoSisvan_Response" type="tns:TP_SeguimientoSisvan_Response"/>
+    
+    <xsd:complexType name="TP_SeguimientoSisvan_Request">
+    	<xsd:sequence>
+    		<xsd:element name="cod_Mcpio" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="3" />
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="cod_Pvncia" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="3" />
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="fecha_Inicio" type="xsd:dateTime" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="fecha_Fin" type="xsd:dateTime" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="codIndicador_Segto" type="xsd:decimal" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="IdPaciente_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="10"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="tipIdPaciente_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="20"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="codEstado_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:enumeration value="A"/>
+    					<xsd:enumeration value="I"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="tipAccion_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="10"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="tipAlerta_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="200"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="descMedico_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="4000"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="codEstadoDetalle_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:enumeration value="A"/>
+    					<xsd:enumeration value="I"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="fechaDetalle_Segto" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="usuario_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:maxLength value="10"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="operacion_Segto" minOccurs="1" maxOccurs="1">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:string">
+    					<xsd:enumeration value="CREATECAB"/>
+    					<xsd:enumeration value="CREATEDET"/>
+    					<xsd:enumeration value="READSEG"/>
+    					<xsd:enumeration value="READSDET"/>
+    					<xsd:enumeration value="UPDATEDET"/>
+    					<xsd:enumeration value="DELETECAB"/>
+    					<xsd:enumeration value="DELETEDET"/>
+    					<xsd:maxLength value="30"/>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="TP_SeguimientoSisvan_Response">
+    	<xsd:sequence>
+    		<xsd:element name="codigo"  		type="xsd:string"  			minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="mensaje" 		type="tns:mensaje" 			minOccurs="1" maxOccurs="1"/>
+    		<xsd:element name="traza_Excepcion" type="Q2:T_Traza_Excepcion" minOccurs="0" maxOccurs="1"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="mensaje">
+    	<xsd:sequence>
+    		<xsd:element name="estatus" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="data" type="tns:dataTipo" minOccurs="0" maxOccurs="1"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="itemTipo">
+    	<xsd:sequence>
+    		<xsd:element name="nomCompleto_Segto"		type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="indicador_Segto" 		type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="id_Segto" 				type="xsd:decimal" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="tipIdpaciente_Segto" 	type="xsd:string" minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="idPaciente_Segto" 		type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="idUsuario_Segto" 		type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="estado_Segto" 			type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="fecha_Segto" 			type="xsd:dateTime" minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="idDetalle_Segto" 		type="xsd:decimal" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="fechaDetalle_Segto" 		type="xsd:dateTime" minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="idUsuarioDetalle_Segto"  type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="idDetalleTAC_Segto" 		type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="alertaDetalle_Segto" 	type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="descDetalle_Segto" 		type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    		<xsd:element name="estadoDetalle_Segto" 	type="xsd:string" 	minOccurs="0" maxOccurs="1" />
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="dataTipo">
+    	<xsd:sequence>
+    		<xsd:element name="item" type="tns:itemTipo" minOccurs="0" maxOccurs="unbounded"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

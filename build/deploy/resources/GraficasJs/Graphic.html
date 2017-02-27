@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+	<title>Graficas JavaScript</title>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/Chart.bundle.min.js"></script>
+	<script src="js/PvsT_B_02.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload = function() {
+    var ctx = document.getElementById("canvas_PvsT_B_02").getContext("2d");
+    window.myLine = new Chart(ctx, config);
+};
+</script>
+	<div style="width:100%;">
+        <canvas id="canvas_PvsT_B_02"></canvas>
+    </div>
+</body>
+</html>

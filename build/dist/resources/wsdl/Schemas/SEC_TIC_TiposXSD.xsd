@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.cundinamarca.gov.co/tiposXSD" xmlns:tns="http://www.cundinamarca.gov.co/tiposXSD">
+	<xsd:complexType name="T_Parametro">
+		<xsd:sequence maxOccurs="unbounded" minOccurs="1">
+			<xsd:element name="nombre" nillable="false" type="xsd:string"/>
+			<xsd:element name="valor" nillable="false" type="xsd:anyType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="T_Traza_Excepcion">
+		<xsd:sequence maxOccurs="unbounded" minOccurs="0">
+			<xsd:element name="codigo_Error" nillable="false"
+				type="xsd:string" minOccurs="1" maxOccurs="1"/>
+
+			<xsd:element name="id_Plataforma_Error" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="causa" nillable="false"
+				type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="descripcion" nillable="false"
+				type="xsd:string" minOccurs="0" maxOccurs="1"/>
+
+
+			<xsd:element name="tratamiento" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="destino_Excepcion" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="horaEntrada_Msj" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="horaSalida_Msj" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="tiempo_Msj" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+			<xsd:element name="mensaje" type="xsd:string" minOccurs="0" maxOccurs="1"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="T_Transaccion">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="codigo" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="1" name="mensaje"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="traza_Excepcion" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="T_Cabecera">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" name="cod_App"
+				type="xsd:int">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0"
+				name="desc_Peticion" type="xsd:string">
+			</xsd:element>
+
+
+
+			<xsd:element name="autenticacion" type="tns:autenticacion"
+				minOccurs="0" maxOccurs="1">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+    <xsd:complexType name="autenticacion">
+    	<xsd:sequence>
+    		<xsd:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"></xsd:any>
+    	</xsd:sequence>
+    	<xsd:anyAttribute namespace="##any" processContents="lax"></xsd:anyAttribute>
+    </xsd:complexType>
+
+
+    <xsd:element name="TP_Cabecera" type="tns:T_Cabecera"></xsd:element>
+</xsd:schema>

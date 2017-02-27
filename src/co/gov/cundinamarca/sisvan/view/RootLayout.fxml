@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="630.0" maxWidth="850.0" minHeight="630.0" minWidth="850.0" prefHeight="630.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.gov.cundinamarca.sisvan.view.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+            <Menu mnemonicParsing="false" text="Archivo">
+              <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Salir" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Sincronización">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleIraSincronizar" text="Sincronizar Ahora" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleIraExporttar" text="Exportar Transacciones" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Transacciones">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleIraGestantes" text="GESTANTES" />
+              <MenuItem mnemonicParsing="false" onAction="#handleIraAdultos" text="ADULTOS" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleIraMenores" text="MENORES" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Administración">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleIraCambioClave" text="Cambiar Clave" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpenHelp" text="Tutorial" />
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="Acerca De" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

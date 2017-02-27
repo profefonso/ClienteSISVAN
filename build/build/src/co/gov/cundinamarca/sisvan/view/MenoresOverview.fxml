@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="600.0" maxWidth="850.0" minHeight="600.0" minWidth="850.0" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.gov.cundinamarca.sisvan.view.MenoresOverviewController">
+   <children>
+      <GridPane layoutX="34.0" layoutY="82.0" prefHeight="600.0" prefWidth="828.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="850.0" minWidth="840.0" prefWidth="850.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="545.0" minHeight="10.0" prefHeight="531.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="78.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TabPane fx:id="tabPane" prefHeight="529.0" prefWidth="847.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+              <tabs>
+                <Tab text="Edición">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutY="14.0" prefHeight="456.0" prefWidth="793.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="185.0" prefWidth="185.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="6.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="14.0" minHeight="14.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="9.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="14.0" minHeight="14.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="9.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="14.0" minHeight="14.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="9.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="14.0" minHeight="14.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="9.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="14.0" minHeight="14.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="9.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="14.0" minHeight="14.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="9.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="14.0" minHeight="14.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="9.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="14.0" minHeight="14.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="20.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="64.0" minHeight="30.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="pacienteFechaNacimientoField" disable="true" editable="false" promptText="Fecha Nacimiento" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                    <Label text="Fecha de nacimiento" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                    <Label text="Programa SAN" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+                                    <Label text="Tipo de consulta" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                    <Label text="Talla (cm)" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                    <Label text="Prog. Departamental nutricional" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                                    <Label text="E.D.A" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                                    <Label text="Identificación del paciente" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin></Label>
+                                    <Label text="Nombre del paciente" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <Label text="Sexo" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                    <Label text="Lactancia materna" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                    <Label text="Micronutrientes" GridPane.columnIndex="7" GridPane.rowIndex="10" />
+                                    <Label text="Actividad física" GridPane.columnIndex="5" GridPane.rowIndex="16" />
+                                    <Label text="Desarrollo motor" GridPane.columnIndex="5" GridPane.rowIndex="13" />
+                                    <Label text="Perímetro cefálico (cm)" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label text="Desparasitación" GridPane.columnIndex="3" GridPane.rowIndex="16" />
+                                    <Label text="Interconsulta" GridPane.columnIndex="7" GridPane.rowIndex="16" />
+                                    <Label text="Circunferencia del brazo (cm)" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                    <Label text="Educación" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+                                    <Label text="Peso (kg)" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                                    <Label text="Tiempo de lactancia (días)" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                                    <Label text="E.R.A" GridPane.columnIndex="7" GridPane.rowIndex="13" />
+                                    <TextField fx:id="pacienteIdentificacionField" disable="true" editable="false" promptText="Identificacion" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="pacienteSexoField" disable="true" promptText="Sexo" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                    <TextField fx:id="pacienteNombreField" disable="true" editable="false" promptText="Nombre" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="2.0" stroke="BLACK" strokeType="INSIDE" width="802.0" GridPane.columnIndex="1" GridPane.rowIndex="25" />
+                                    <Label text="Control de recién nacido" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <ComboBox fx:id="controlBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <ComboBox fx:id="tipo_ConsultasBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                    <TextField fx:id="menorPesoField" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                    <TextField fx:id="menorTallaField" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                                    <TextField fx:id="menorPerimetroCefalicoField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <TextField fx:id="menorCircunferenciaBrazoField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="lactanciasBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                                    <TextField fx:id="menorTiempoLactanciaField" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                                    <Label text="Tipo de población" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <ComboBox fx:id="tipo_PoblacionesBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <ComboBox fx:id="paqueteNutricionalBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                                    <ComboBox fx:id="programasBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                                    <ComboBox fx:id="micronutrientesBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="7" GridPane.rowIndex="11" />
+                                    <Label text="Régimen de afiliación" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                    <ComboBox fx:id="regimenesBox" prefHeight="25.0" prefWidth="187.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                    <Label text="EPS" GridPane.columnIndex="3" GridPane.rowIndex="13" />
+                                    <ComboBox fx:id="entidadesBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+                                    <ComboBox fx:id="desarrollosBox" prefHeight="25.0" prefWidth="186.0" GridPane.columnIndex="5" GridPane.rowIndex="14" />
+                                    <ComboBox fx:id="eraBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="7" GridPane.rowIndex="14" />
+                                    <ComboBox fx:id="edaBox" prefHeight="25.0" prefWidth="186.0" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+                                    <ComboBox fx:id="desparacitacionBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="3" GridPane.rowIndex="17" />
+                                    <ComboBox fx:id="actividadesBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="5" GridPane.rowIndex="17" />
+                                    <ComboBox fx:id="especialidadesBox" prefHeight="25.0" prefWidth="187.0" GridPane.columnIndex="7" GridPane.rowIndex="17" />
+                                    <ComboBox fx:id="educacion_MenoresBox" prefHeight="25.0" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+                                    <Button defaultButton="true" mnemonicParsing="false" onAction="#handleGuardar" prefHeight="34.0" prefWidth="185.0" text="Guardar" GridPane.columnIndex="7" GridPane.rowIndex="27" />
+                                    <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="34.0" prefWidth="185.0" text="Salir" GridPane.columnIndex="5" GridPane.rowIndex="27" />
+                                    <ImageView fitHeight="136.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="24" GridPane.valignment="BOTTOM">
+                                       <image>
+                                          <Image url="file:resources/images/CLIENTES-11-PEQ.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="72.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="24">
+                                       <image>
+                                          <Image url="file:resources/images/LOGOS-01-PEQ.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="disponibleUnoField" GridPane.columnIndex="3" GridPane.rowIndex="20" />
+                                    <TextField fx:id="disponibleDosField" GridPane.columnIndex="5" GridPane.rowIndex="20" />
+                                    <Label fx:id="disponibleUnoLabel" text="Disponible Uno" GridPane.columnIndex="3" GridPane.rowIndex="19" />
+                                    <Label fx:id="disponibleDosLabel" text="Disponible Dos" GridPane.columnIndex="5" GridPane.rowIndex="19" />
+                                    <Label fx:id="disponibleTresLabel" text="Disponible tres" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+                                    <Label fx:id="disponibleCuatroLabel" text="Disponible cuatro" GridPane.columnIndex="3" GridPane.rowIndex="22" />
+                                    <TextField fx:id="disponibleCuatroField" GridPane.columnIndex="3" GridPane.rowIndex="23" />
+                                    <TextField fx:id="disponibleTresField" GridPane.columnIndex="1" GridPane.rowIndex="23" />
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Datos Calculados">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="29.0" layoutY="100.0" prefHeight="511.0" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="414.0" minWidth="10.0" prefWidth="29.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="829.0" minWidth="10.0" prefWidth="214.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="829.0" minWidth="10.0" prefWidth="311.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="829.0" minWidth="10.0" prefWidth="23.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="829.0" minWidth="10.0" prefWidth="278.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="15.0" minHeight="15.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="23.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="490.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Edad:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="Edad Aproximada:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="calculaEdadField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="calculaEdadAproximadaField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label text="Talla para la edad T/E:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <WebView fx:id="webView" maxHeight="10.0" maxWidth="10.0" prefHeight="10.0" prefWidth="10.0" GridPane.columnIndex="4" GridPane.rowIndex="13">
+                                       <GridPane.margin>
+                                          <Insets left="16.0" />
+                                       </GridPane.margin></WebView>
+                                    <TextField fx:id="zScoreAgeSizeField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <Label text="Indice de Masa Corporal:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="iMCField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <Label text="Indice de Masa Corporal para la edad:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="zScoreAgeIMCField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <Label text="Momento vital: " GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField fx:id="momentoVitalField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <Label text="Peso para edad P/E:" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <TextField fx:id="zScoreWeightAgeField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <Label text="Perimetro Cefalico para la edad PC/E:" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <TextField fx:id="headCircunferenceAgeField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <Label text="Peso para talla P/T: " GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <TextField fx:id="zScoreWeightSizeField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <Label text="Cinrcunferencia media del brazo CB:" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <TextField fx:id="armCircunferenceAgeField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                                    <ImageView fitHeight="69.0" fitWidth="17.0" onMousePressed="#handleIrGraphicsAgeSize" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <image>
+                                          <Image url="file:resources/images/lok.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                    <ImageView fitHeight="69.0" fitWidth="17.0" onMousePressed="#handleIrGraphicsWeightAge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="file:resources/images/lok.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="69.0" fitWidth="17.0" onMousePressed="#handleIrGraphicsImcAge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="file:resources/images/lok.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="69.0" fitWidth="17.0" onMousePressed="#handleIrGraphicsWeightSize" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="file:resources/images/lok.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="34.0" prefWidth="185.0" text="Salir" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="BOTTOM">
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" />
+                                       </GridPane.margin></Button>
+                                    <ImageView fitHeight="69.0" fitWidth="17.0" onMousePressed="#handlerIrGraphicsHeadAge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <image>
+                                          <Image url="file:resources/images/lok.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Provincia de Notificacion:" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <Label text="Provincia de Residencia:" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                    <TextField fx:id="proviciaNotificacionField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                    <TextField fx:id="proviciaResidenciaField" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                                    <ImageView fitHeight="72.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="13" GridPane.valignment="TOP">
+                                       <image>
+                                          <Image url="file:resources/images/LOGOS-01-PEQ.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="119.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="12">
+                                       <image>
+                                          <Image url="file:resources/images/CLIENTES-11-PEQ.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button defaultButton="true" mnemonicParsing="false" onAction="#handleGuardar" prefHeight="34.0" prefWidth="185.0" text="Guardar" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="BOTTOM">
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="2.0" stroke="BLACK" strokeType="INSIDE" width="802.0" GridPane.columnIndex="1" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets top="22.0" />
+                                       </GridPane.margin>
+                                    </Rectangle>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <ImageView fitHeight="70.0" fitWidth="830.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resources/images/MENORES-01-PEQ.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

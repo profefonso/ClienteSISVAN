@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="apMain" prefHeight="310.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.gov.cundinamarca.sisvan.view.BulkOverviewController">
+   <children>
+      <ProgressBar id="progress" fx:id="pbProgress" layoutX="20.0" layoutY="35.0" prefHeight="18.0" prefWidth="370.0">
+         <cursor>
+            <Cursor fx:constant="SE_RESIZE" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect>
+      </ProgressBar>
+      <Label fx:id="lblResult" layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="335.0" text="Cargando archivo..." />
+      <Button fx:id="btnAceptar" defaultButton="true" layoutX="161.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleOpen" text="Seleccionar Archivo" />
+      <Button fx:id="btnCancelar" cancelButton="true" layoutX="299.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="91.0" text="Cancelar" />
+      <TextArea fx:id="loggingView" layoutX="20.0" layoutY="61.0" prefHeight="200.0" prefWidth="370.0" />
+   </children>
+</AnchorPane>
